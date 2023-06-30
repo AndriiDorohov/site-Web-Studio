@@ -17,3 +17,7 @@
 
 - All content images are responsive, support `webp` format and `x2` pixel density. At the same time,
   there are folback images in an alternative format `jpg` or `png'.
+
+<div align="center">
+  <img src="https://github.com/AndriiDorohov/goit-site-Web-Studio/blob/main/preview.png"/>
+</div>
