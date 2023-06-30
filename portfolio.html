@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Portfolio | Web Studio</title>
+    <meta name="description" content="Web Studio Portfolio" />
+
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+
+    <link rel="preload" href="./fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./fonts/Roboto-Medium.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./fonts/Roboto-Black.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./fonts/Raleway-Bold.ttf" as="font" type="font/ttf" crossorigin />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container main-nav">
+        <a href="./index.html" class="logo header__logo"
+          ><span class="logo__text">Web</span>Studio</a
+        >
+
+        <button
+          type="button"
+          class="mobile-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Mobile menu switch" class="mobile-button__icon">
+            <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+            <use class="icon-menu" href="./images/sprite.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="./index.html" class="menu__link">Studio</a>
+              </li>
+              <li class="menu__item">
+                <a href="./portfolio.html" class="menu__link menu__link--current">Portfolio</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link">
+                <div class="contacts__icon">
+                  <svg class="contacts__mail" width="16" height="12">
+                    <use href="./images/sprite.svg#icon-head-mail"></use>
+                  </svg>
+
+                  info@devstudio.com
+                </div></a
+              >
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+46791234567" class="contacts__link">
+                <div class="contacts__icon">
+                  <svg class="contacts__phone" width="10" height="16">
+                    <use href="./images/sprite.svg#icon-head-phone"></use>
+                  </svg>
+
+                  +46 79 123 45 67
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="section portfolio">
+          <ul class="filters">
+            <li class="filters__item">
+              <button type="button" class="filters__btn">All</button>
+            </li>
+
+            <li class="filters__item">
+              <button type="button" class="filters__btn">Web sites</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__btn">Applications</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__btn">Design</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__btn">Marketing</button>
+            </li>
+          </ul>
+
+          <ul class="portfolio__list">
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-1-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-1-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-1-768@1x.webp 1x,
+                        ./images/tablet/portfolio-1-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-1-480@1x.webp 1x,
+                        ./images/mobile/portfolio-1-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-1-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-1-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-1-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-1-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-1-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-1-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-1-480@1x.jpg"
+                      loading="lazy"
+                      alt="Site example"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Technocrack</h2>
+                  <p class="portfolio__text">Website</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-2-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-2-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-2-768@1x.webp 1x,
+                        ./images/tablet/portfolio-2-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-2-480@1x.webp 1x,
+                        ./images/mobile/portfolio-2-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-2-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-2-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-2-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-2-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-2-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-2-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-2-480@1x.jpg"
+                      loading="lazy"
+                      alt="Two men playing basketball"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Poster New Orlean vs Golden Star</h2>
+                  <p class="portfolio__text">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-3-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-3-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-3-768@1x.webp 1x,
+                        ./images/tablet/portfolio-3-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-3-480@1x.webp 1x,
+                        ./images/mobile/portfolio-3-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-3-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-3-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-3-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-3-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-3-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-3-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-3-480@1x.jpg"
+                      loading="lazy"
+                      alt="Restaurant logo with fish on the background"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Restaurant Seafood</h2>
+                  <p class="portfolio__text">Application</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-4-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-4-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-4-768@1x.webp 1x,
+                        ./images/tablet/portfolio-4-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-4-480@1x.webp 1x,
+                        ./images/mobile/portfolio-4-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-4-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-4-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-4-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-4-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-4-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-4-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-4-480@1x.jpg"
+                      loading="lazy"
+                      alt="Наушники"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Project Prime</h2>
+                  <p class="portfolio__text">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-5-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-5-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-5-768@1x.webp 1x,
+                        ./images/tablet/portfolio-5-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-5-480@1x.webp 1x,
+                        ./images/mobile/portfolio-5-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-5-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-5-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-5-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-5-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-5-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-5-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-5-480@1x.jpg"
+                      loading="lazy"
+                      alt="Две коробки"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Project Boxes</h2>
+                  <p class="portfolio__text">Application</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-6-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-6-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-6-768@1x.webp 1x,
+                        ./images/tablet/portfolio-6-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-6-480@1x.webp 1x,
+                        ./images/mobile/portfolio-6-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-6-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-6-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-6-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-6-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-6-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-6-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-6-480@1x.jpg"
+                      loading="lazy"
+                      alt="Карта мира на темном фоне"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Inspiration has no Borders</h2>
+                  <p class="portfolio__text">Website</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-7-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-7-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-7-768@1x.webp 1x,
+                        ./images/tablet/portfolio-7-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-7-480@1x.webp 1x,
+                        ./images/mobile/portfolio-7-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-7-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-7-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-7-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-7-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-7-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-7-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-7-480@1x.jpg"
+                      loading="lazy"
+                      alt="Разворот книги"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Publication Limited Edition</h2>
+                  <p class="portfolio__text">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-8-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-8-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-8-768@1x.webp 1x,
+                        ./images/tablet/portfolio-8-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-8-480@1x.webp 1x,
+                        ./images/mobile/portfolio-8-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-8-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-8-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-8-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-8-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-8-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-8-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-8-480@1x.jpg"
+                      loading="lazy"
+                      alt="Белая бирка"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Project LAB</h2>
+                  <p class="portfolio__text">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio__item">
+              <a href="#" class="portfolio__link">
+                <div class="portfolio__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-9-1200@1x.webp 1x,
+                        ./images/desktop/portfolio-9-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-9-768@1x.webp 1x,
+                        ./images/tablet/portfolio-9-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-9-480@1x.webp 1x,
+                        ./images/mobile/portfolio-9-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio-9-1200@1x.jpg 1x,
+                        ./images/desktop/portfolio-9-1200@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-9-768@1x.jpg 1x,
+                        ./images/tablet/portfolio-9-768@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-9-480@1x.jpg 1x,
+                        ./images/mobile/portfolio-9-480@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/mobile/portfolio-9-480@1x.jpg"
+                      loading="lazy"
+                      alt="Человек печаает на ноутбуке"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+                  <p class="portfolio__tooltip">
+                    Technocrack is a modern platform for the spread of coronavirus. The company they
+                    use this platform for digital espionage and attacks on secure servers
+                    competitors.
+                  </p>
+                </div>
+                <div class="portfolio__content">
+                  <h2 class="portfolio__title">Growing Business</h2>
+                  <p class="portfolio__text">Application</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-blocks">
+          <div class="address-block">
+            <a href="./index.html" class="logo footer__logo"
+              ><span class="logo__text">Web</span>Studio</a
+            >
+
+            <address class="adress">
+              <p class="adress__map">Stenhammarsgatan, 412 56 Göteborg</p>
+              <ul class="adress__list">
+                <li class="adress__item">
+                  <a href="mailto:info@example.com" class="adress__link">info@example.com</a>
+                </li>
+                <li class="adress__item">
+                  <a href="tel:+46791234567" class="adress__link">+46 79 123 45 67</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="networks">
+            <b class="networks__title">Join</b>
+            <ul class="networks__list">
+              <li class="networks__item">
+                <a href="#" class="media-link networks__link" aria-label="Instagram">
+                  <svg class="media-icon networks__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="media-link networks__link" aria-label="Twiter">
+                  <svg class="media-icon networks__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="media-link networks__link" aria-label="Facebook">
+                  <svg class="media-icon networks__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a
+                  href="https://www.linkedin.com/in/andrii-dorokhov-4a700b132/"
+                  class="media-link networks__link"
+                  aria-label="LinkedIn"
+                >
+                  <svg class="media-icon networks__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="subscribe">
+            <b class="networks__title">Subscribe to newsletter</b>
+            <form class="subscribe__field">
+              <input
+                type="email"
+                name="subscribe-email"
+                id="subscribe-email"
+                placeholder="E-mail"
+                required
+                class="subscribe__input"
+                aria-label="Enter email to send"
+              />
+              <button
+                type="submit"
+                class="btn subscribe__btn"
+                aria-label="Subscribing to the newsletter"
+              >
+                <span>Subscribe</span>
+                <svg class="subscribe__icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

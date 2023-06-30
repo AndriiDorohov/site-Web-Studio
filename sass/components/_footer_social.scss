@@ -1,0 +1,57 @@
+// Block of social networks in the footer
+
+.networks {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+// Block title
+
+.networks__title {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+// List of social networks
+
+.networks__list {
+  @extend %list;
+
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+// List Item
+
+.networks__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+// Element Reference
+
+.networks__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+// Social Network Icons
+
+.networks__icon {
+  fill: $primary-bg-color;
+
+  .networks__link:hover &,
+  .networks__link:focus & {
+    fill: $additional-background-color;
+  }
+}
