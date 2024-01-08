@@ -1,7 +1,6 @@
 https://andriidorohov.github.io/site-Web-Studio/
 ### Additional criteria
 
-- The repository `goit-markup-hw-08` has been created.
 - The SASS preprocessor is used.
 - When writing styles, a Mobile-first approach and a media function are used `min-width`.
 - There is no unnecessary duplication of styles in media queries.
